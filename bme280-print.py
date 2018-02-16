@@ -4,7 +4,7 @@ import bme280
 import time
 
 i2c = machine.I2C(scl=machine.Pin(5), sda=machine.Pin(4))
-bme = bme280.BME280(i2c=i2c)
+bme = bme280.BME280(i2c=i2c, address=0x76)
 
 while True:
     print(bme.values)
